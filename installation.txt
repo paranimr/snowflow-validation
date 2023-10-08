@@ -1,0 +1,8 @@
+curl 'https://airflow.apache.org/docs/apache-airflow/2.7.1/docker-compose.yaml' -o 'docker-compose.yaml'
+mkdir plugins
+mkdir dags
+mkdir logs
+mkdir config
+docker compose up airflow-init
+docker compose up
+python setup.py bdist_egg
